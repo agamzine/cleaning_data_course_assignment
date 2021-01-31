@@ -1,0 +1,25 @@
+---
+title: "CodeBook"
+output: html_notebook
+---
+
+This repository contains code for submission of the week 4 programming assignment in the course titled: 'Getting and Cleaning Data' by John Hopkins University. The username for the submission on GitHub is agamzine.
+
+There are 2 files in this repository:
+
+1. 'run_analysis.R' which contains the scripts for data ingestion and transformation
+2. 'new_df' which contains the tidy dataset as per the instructions of the course assignment
+
+The transformations done are as follows:
+
+First we load in the list of feature names to create a subset extract with which contains only the mean() and std() features - this will be used later in the process.
+
+We then ingest the training data into R and perform some transformations. The column names are labelled as per the list of features. We also add the activity and subject columns at this stage. 
+
+The entire process is then repeated for test data.
+
+The test and training data are then combined by rows, and melted according to Subject and Activity to ensure it is in a tidy format. In addition to this we want to label the activities in plain english so there is another step in the code that does this, pulling in a source file containing activity names.
+
+Finally, the entire dataset is grouped and summarised so that only the average reading value is provided in the final dataframe 'new_df'.
+
+
