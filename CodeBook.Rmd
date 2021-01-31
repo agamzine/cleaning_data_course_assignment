@@ -10,6 +10,12 @@ There are 2 files in this repository:
 1. 'run_analysis.R' which contains the scripts for data ingestion and transformation
 2. 'new_df' which contains the tidy dataset as per the instructions of the course assignment
 
+The variables in the dataset are as follows:
+1. 'Subject' is a numerical identifier for the 30 participants who took part in the smartphone sensor study.
+2. 'Activity' is one of 6 activities the participant could perform while being tracked
+3. 'variable' is a subset of features analyzed by the smartphones. The subset includes only the mean and standard deviation readings.  
+4. 'mean' is the average reading of each varible/subect/activity grouping in the data.
+
 The transformations done are as follows:
 
 First we load in the list of feature names to create a subset extract with which contains only the mean() and std() features - this will be used later in the process.
